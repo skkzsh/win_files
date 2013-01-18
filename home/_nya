@@ -1,0 +1,73 @@
+# -*- shell-script -*-
+# vim: filetype=csh
+
+## PATH
+## Gow
+set PATH+=%ProgramFiles%\Gow\bin
+# GowÇÊÇËPriorityÇè„Ç∞ÇÈ
+set PATH+=%ProgramFiles%\PuTTY
+set PATH+=%HOMEDRIVE%\Applications\vim73-kaoriya-win64
+# set PATH+=%HOMEDRIVE%\Applications\less-win32\bin
+
+# set PATH+=%HOMEDRIVE%\MinGW\bin
+# set PATH+=%HOMEDRIVE%\MinGW\msys\1.0\bin
+# set PATH+=%ProgramFiles%\Git\bin
+
+## History
+option savehist %HOME%/_nya_history
+
+## Prompt
+option prompt $e[36;40;1m[$w9]$$ $e[37;1m
+## Default
+# option prompt $e[31;40;1m[$w]$_$$ $e[37;1m
+
+## Aliases
+alias ll ls -l
+alias la ls -a
+alias o open
+# alias o cmd /c start
+alias .. cd ..
+alias .... cd ../..
+alias ...... cd ../../..
+alias sl ls
+alias h history
+alias wh which
+alias p ping
+alias nkfg nkf -g
+alias nkfu nkf --overwrite -w -Lu
+alias nkfe nkf --overwrite -e -Lu
+alias nkfs nkf --overwrite -s -Lw
+alias rm rm -i
+alias cp cp -i
+alias mv mv -i
+alias wg wget
+alias c curl
+alias vi vim
+alias e runemacs
+alias g git
+alias msysbash cmd /c ""%HOMEDRIVE%\MinGW\msys\1.0\bin\bash.exe" --login -i"
+alias gitbash cmd /c ""%ProgramFiles%\Git\bin\sh.exe" --login -i"
+alias ps1 powershell
+
+## less
+alias less cmd /c "%ProgramFiles%\Git\bin\less.exe"
+alias l cmd /c "%ProgramFiles%\Git\bin\less.exe -R"
+# alias less cmd /c "%ProgramFiles%\Gow\bin\less.exe"
+# alias l cmd /c "%ProgramFiles%\Gow\bin\less.exe"
+# alias less cmd /c "%HOMEDRIVE%\MinGW\msys\1.0\bin\less.exe"
+# alias l cmd /c "%HOMEDRIVE%\MinGW\msys\1.0\bin\less.exe"
+
+## Env
+# set LANG=ja_JP.UTF-8
+# TODO: Console2ÇÃPager
+# set PAGER=less
+set VISUAL=gvim
+# set EDITOR=gvim
+if $TERM == dumb then
+    set TERM=cygwin
+endif
+
+## Key
+bindkey ctrl_s next xscript:next
+
+# suffix
