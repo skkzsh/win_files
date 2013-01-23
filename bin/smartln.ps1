@@ -7,7 +7,7 @@ Make Symbolic Link or Copy Carefully
 This powershell script enables you to
 make a symbolic link or copy a file
 only if the source file exists and
-you agree to remove the distination file.
+you agree to remove the destination file.
 
 .EXAMPLE
 smartln.ps1 mklink source destination1

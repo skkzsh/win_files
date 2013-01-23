@@ -15,6 +15,8 @@ $win_dir = "$prefix\Repository\bitbucket\win_files"
 
 ## 共有元の各Directoryで共有させるFilesのList
 $home_files = '_nya'
+## 共有元の各Directoryで共有させるDirectoresのList
+$home_dirs = '_nya_d'
 
 ### Symbolic Link
 
@@ -22,7 +24,7 @@ $home_files = '_nya'
 smartln.ps1 mklink "$win_dir\bin" "$Env:HOMEDRIVE\bin"
 
 ## home
-foreach ($file in $home_files) {
+foreach ($file in $home_files + $home_dirs) {
     smartln.ps1 mklink "$win_dir\home\$file" "$ENV:HOME\$file"
 }
 
