@@ -63,6 +63,12 @@ function take ($dir) {
 Set-Alias gpga 'gpg -c --cipher-algo=aes256'
 Set-Alias osa 'openssl aes-256-cbc'
 
+## Plugins
+
+if (Test-Path "$Env:USERPROFILE\Documents\WindowsPowerShell\Modules\PsGet" -PathType Container) {
+    Import-Module PsGet
+}
+
 # Load Jump-Location profile
 if (Test-Path "$Env:USERPROFILE\Documents\WindowsPowerShell\plugins\Jump.Location" -PathType Container) {
     . "$Env:USERPROFILE\Documents\WindowsPowerShell\plugins\Jump.Location\Load.ps1"
