@@ -16,22 +16,27 @@ Set-Alias vi vim
 Set-Alias e runemacs
 Set-Alias g git
 
-#if ($Env:TERM -eq 'dumb') {
-#    $Env:TERM = 'ps1'
+## lessÇ»Ç«ÇÃëŒçÙ
+if ($Env:TERM -eq 'dumb') {
+    $Env:TERM = 'xterm'
+}
+
 if (Test-Path C:\Applications\less-win32 -PathType Container) {
     $Env:PATH = "C:\Applications\less-win32\bin;" + $Env:Path
     $Env:PAGER = 'less'
 }
+# elseif (Test-Path $Env:ProgramFiles\Gow\bin -PathType Container) {
+#     $Env:PATH = "$Env:ProgramFiles\Gow\bin;" + $Env:PATH
+#     # GowÇÊÇËPriorityÇè„Ç∞ÇÈ
+#     $Env:PATH = "$Env:ProgramFiles\PuTTY;" + $Env:PATH
+#     $Env:PATH = "$Env:HOMEDRIVE\Applications\vim73-kaoriya-win64;" + $Env:PATH
+#     # Set-Alias less "$Env:ProgramFiles\Gow\bin\less.exe"
+#     $Env:PAGER = 'less'
+# }
+# }
 # TODO: Console2ÇÃPager
-#elseif (Test-Path $Env:ProgramFiles\Gow\bin -PathType Container)
-#Set-Alias less "$Env:ProgramFiles\Gow\bin\less.exe"
-#$Env:PATH += ";$Env:ProgramFiles\Gow\bin"
-#}
-#}
 
 Set-Alias l less
-$Env:VISUAL = 'gvim'
-# $Env:EDITOR = 'gvim'
 
 # grepÇ™ñ≥ÇØÇÍÇŒÅCgrepÇÃAliasÇçÏê¨
 #if (-not(gcm grep -ea SilentlyContinue)) {
@@ -39,3 +44,31 @@ $Env:VISUAL = 'gvim'
 #}
 
 ## Env
+$Env:VISUAL = 'gvim'
+# $Env:EDITOR = 'gvim'
+
+## Functions
+## TODO: Verb - Noun
+
+function gtop {
+    cd $(git rev-parse --show-toplevel)
+}
+
+## TODO: Exception Handling
+function take ($dir) {
+    md $dir
+    cd $dir
+}
+
+Set-Alias gpga 'gpg -c --cipher-algo=aes256'
+Set-Alias osa 'openssl aes-256-cbc'
+
+# Load Jump-Location profile
+if (Test-Path "$Env:USERPROFILE\Documents\WindowsPowerShell\plugins\Jump.Location" -PathType Container) {
+    . "$Env:USERPROFILE\Documents\WindowsPowerShell\plugins\Jump.Location\Load.ps1"
+}
+
+# Load posh-git example profile
+#if (Test-Path "$Env:USERPROFILE\Documents\WindowsPowerShell\Modules\posh-git" -PathType Container) {
+#    . "$Env:USERPROFILE\Documents\WindowsPowerShell\Modules\posh-git\profile.example.ps1"
+#}
