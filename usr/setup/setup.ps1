@@ -21,15 +21,16 @@ $home_dirs = '_nya_d'
 ### Symbolic Link
 
 ## bin
-smartln.ps1 mklink "$win_dir\bin" "$Env:HOMEDRIVE\bin"
+# smartln.ps1 mklink "$win_dir\bin" "$Env:HOMEDRIVE\bin"
 
 ## home
-foreach ($file in $home_files + $home_dirs) {
+# foreach ($file in $home_files + $home_dirs) {
+foreach ($file in $home_files, $home_dirs) {
     smartln.ps1 mklink "$win_dir\home\$file" "$ENV:HOME\$file"
 }
 
 ## Applications
-smartln.ps1 mklink "$win_dir\Applications\mayu\.mayu" "$ENV:HOMEDRIVE\Applications\yamy\.mayu"
+smartln.ps1 copy "$win_dir\Applications\mayu\.mayu" "$ENV:HOMEDRIVE\Applications\yamy\.mayu"
 
 ## Documents
 smartln.ps1 mklink "$win_dir\User\Documents\WindowsPowerShell" "$ENV:USERPROFILE\Documents\WindowsPowerShell"
