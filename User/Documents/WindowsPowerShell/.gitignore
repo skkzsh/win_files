@@ -1,0 +1,4 @@
+Plugins/*
+Modules/*
+!Plugins/.gitkeep
+!Modules/.gitkeep
