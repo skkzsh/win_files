@@ -86,8 +86,8 @@ window PuTTY /putty\.exe/ : Global
  key C-Yen = C-Yen
  key C-BackSlash = C-BackSlash
  key C-S-HyphenMinus = C-S-HyphenMinus
- # key = C-S-C
- # key = C-S-V
+ key C-S-C = C-Insert
+ key C-S-V = S-Insert
 
 # window Firefox /firefox\.exe/ : ReturnGLobal
 # window Word /WINWORD\.EXE/ : Global
