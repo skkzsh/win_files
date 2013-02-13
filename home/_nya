@@ -1,25 +1,48 @@
-# -*- shell-script -*-
+# -*- conf-unix -*-
 # vim: filetype=csh
 
-## PATH
-## Gow
-set PATH+=%ProgramFiles%\Gow\bin
-# GowÇÊÇËPriorityÇè„Ç∞ÇÈ
-set PATH+=%ProgramFiles%\PuTTY
-set PATH+=%HOMEDRIVE%\Applications\vim73-kaoriya-win64
-# set PATH+=%HOMEDRIVE%\Applications\less-win32\bin
+#---------------------------------------------------------------------------
 
-# set PATH+=%HOMEDRIVE%\MinGW\bin
-# set PATH+=%HOMEDRIVE%\MinGW\msys\1.0\bin
+## PATH
+
+# set PATH+=%HOMEDRIVE%\MinGW\bin;%HOMEDRIVE%\MinGW\msys\1.0\bin
+set PATH+=%ProgramFiles%\Gow\bin
+# set PATH+=%HOMEDRIVE%\GnuWin32\bin
+
+## Elevate Priority
+# set PATH+=%ProgramFiles%\PuTTY
+# set PATH+=%HOMEDRIVE%\Applications\vim73-kaoriya-win64
+# set PATH+=%HOMEDRIVE%\Applications\less-win32\bin
 # set PATH+=%ProgramFiles%\Git\bin
 
+## PATHÇÃON/OFF
+alias gowon set PATH+=%ProgramFiles%\Gow\bin
+alias gowoff set PATH-=%ProgramFiles%\Gow\bin
+alias msyson set PATH+=%HOMEDRIVE%\MinGW\bin;%HOMEDRIVE%\MinGW\msys\1.0\bin
+alias msysoff set PATH-=%HOMEDRIVE%\MinGW\bin;%HOMEDRIVE%\MinGW\msys\1.0\bin
+# alias berryon set PATH+=%HOMEDRIVE%\Python27\Scripts;%HOMEDRIVE%\Python27;%HOMEDRIVE%\strawberry\perl\site\bin;%HOMEDRIVE%\perl\bin;%HOMEDRIVE%\strawberry\c\bin
+# alias berryoff set PATH-=%HOMEDRIVE%\Python27\Scripts;%HOMEDRIVE%\Python27;%HOMEDRIVE%\strawberry\perl\site\bin;%HOMEDRIVE%\perl\bin;%HOMEDRIVE%\strawberry\c\bin
+
+#---------------------------------------------------------------------------
+
+## Basic
+
 ## History
-option savehist %HOME%/_nya_history
+option savehist %HOME%\_nya_history
+
+## Key
+bindkey ctrl_s next xscript:next
 
 ## Prompt
-option prompt $e[36;40;1m[$w9]$$ $e[37;1m
+## 34 36 37
+## ê¬ êÖ îí
+option prompt $e[34;40;1m[$w9] $e[37;1m
 ## Default
 # option prompt $e[31;40;1m[$w]$_$$ $e[37;1m
+
+## suffix
+
+#---------------------------------------------------------------------------
 
 ## Aliases
 alias ll ls -l
@@ -50,12 +73,15 @@ alias gitbash cmd /c ""%ProgramFiles%\Git\bin\sh.exe" --login -i"
 alias ps1 powershell
 
 ## less
+# alias l less
 alias less cmd /c "%ProgramFiles%\Git\bin\less.exe"
-alias l cmd /c "%ProgramFiles%\Git\bin\less.exe -R"
+alias l cmd /c "%ProgramFiles%\Git\bin\less.exe"
 # alias less cmd /c "%ProgramFiles%\Gow\bin\less.exe"
 # alias l cmd /c "%ProgramFiles%\Gow\bin\less.exe"
 # alias less cmd /c "%HOMEDRIVE%\MinGW\msys\1.0\bin\less.exe"
 # alias l cmd /c "%HOMEDRIVE%\MinGW\msys\1.0\bin\less.exe"
+
+#---------------------------------------------------------------------------
 
 ## Env
 # set LANG=ja_JP.UTF-8
@@ -63,11 +89,27 @@ alias l cmd /c "%ProgramFiles%\Git\bin\less.exe -R"
 # set PAGER=less
 set VISUAL=gvim
 # set EDITOR=gvim
+
+## lessÇ»Ç«ÇÃëŒçÙ
 if $TERM == dumb then
     set TERM=cygwin
 endif
 
-## Key
-bindkey ctrl_s next xscript:next
+#---------------------------------------------------------------------------
 
-# suffix
+## Plugins
+source %HOME%\_nya_d\public_repos\git\_nya_git.lua
+
+#---------------------------------------------------------------------------
+
+## Functions
+gtop{
+    cd `git rev-parse --show-toplevel`
+}
+
+take{
+    md %1 && cd %1
+}
+
+alias gpga gpg -c --cipher-algo=aes256
+alias osa openssl aes-256-cbc
