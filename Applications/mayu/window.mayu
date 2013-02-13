@@ -1,0 +1,63 @@
+# -*- conf-unix -*-
+# vim: filetype=conf
+
+## Applications
+
+# window InternetExplorer /iexplore\.exe/ : Global
+# window InternetExplorer /iexplore\.exe/ : EmacsMove
+# window InternetExplorer /iexplore\.exe/ : EmacsEdit
+
+window Opera /opera\.exe/ : ReturnGlobal
+
+window Explorer /explorer\.exe/ : MyEmacs
+ key C-W = C-W
+ key C-D = C-D
+
+window fenrir /fenrir\.exe/ : MyEmacsMore
+ key C-LeftSquareBracket = C-LeftSquareBracket
+
+window RDPClient /mstsc\.exe/ : MyEmacs
+window Skype /Skype\.exe/ : MyEmacs
+
+# window Console2 /Console.exe/ : Global
+
+# window Shell /cmd\.exe|powershell.exe/ : MyEmacs
+#  key C-M = C-M
+#  key C-H = C-H
+#  key C-Slash = C-Slash
+#  key C-Y = C-Y
+
+window PowerShell_ISE /powershell_ise\.exe/ : MyEmacsMore
+ key C-G = C-G
+
+window Notepad /notepad\.exe/ : MyEmacsMore
+
+window TeraPad /TeraPad\.exe/ : MyEmacsMore
+ key C-J = C-J
+
+window Vim /gvim\.exe/ : Global
+ key C-Yen = C-Yen
+ key C-BackSlash = C-BackSlash
+ key C-S-HyphenMinus = C-S-HyphenMinus
+
+window Emacs /runemacs\.exe/ : Global
+ key C-Yen = C-Yen
+ key C-BackSlash = C-BackSlash
+ key C-S-HyphenMinus = C-S-HyphenMinus
+
+window PuTTY /putty\.exe/ : Global
+ key C-Yen = C-Yen
+ key C-BackSlash = C-BackSlash
+ key C-S-HyphenMinus = C-S-HyphenMinus
+ key C-S-C = C-Insert
+ key C-S-V = S-Insert
+
+# window Firefox /firefox\.exe/ : ReturnGLobal
+# window Word /WINWORD\.EXE/ : Global
+# window PowerPoint /POWERPNT\.EXE/ : Global
+# window Excel /EXCEL\.EXE/ : Global
+# window Evernote /evernote\.exe/ : Global
+# window iTunes /iTunes\.exe/ : Global
+# window Chrome /chrome\.exe/ : Global
+# window Thunderbird /thunderbird\.exe/ : Global
+# window Mendeley /MendedeyDesktop\.exe/ : Global

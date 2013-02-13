@@ -1,100 +1,28 @@
 # -*- conf-unix -*-
 # vim: filetype=conf
 
-# TODO: Temporarily Disable
+## TODO: Temporarily Disable
 
-include "109.mayu" # 109 Keyboard Setting
+#---------------------------------------------------------------------------
+## Include Default Settings
+
+include "109.mayu" # 109 Keyboard Settings
+# include "104on109.mayu" # 104 Keyboard Like Settings on 109 Keyboard
+
+# include "104.mayu" # 104 Keyboard Settings
+# include "109on104.mayu" # 109 Keyboard Like Settings on 104 Keyboard
 
 # include "default.mayu" # Emacs Like Keybind
 
-keymap Global
- key C-Yen = $ToggleIME
- key C-BackSlash = $ToggleIME
- key C-Space = $ToggleIME
- key C-S-HyphenMinus = $ToggleIME
+#---------------------------------------------------------------------------
+## Include My Modifier Key Settings
+# include "cl-mod.mayu"
 
-keymap ReturnGlobal: Global
- key C-M  = Return
- key C-J  = Return
+#---------------------------------------------------------------------------
+## Include My Keymap Setttings
+include "emacs-keymap.mayu"
+include "mod-keymap.mayu"
 
-keymap MyEmacs : ReturnGlobal
- key C-D = Delete
- key C-H = BackSpace
- key C-W = C-BackSpace
- key C-K = S-End S-Delete
- key C-U = S-HOME S-Delete
- key *S-C-I = *S-Tab
- key *S-C-A = *S-Home
- key *S-C-B = *S-Left
- key *S-C-E = *S-End
- key *S-C-F = *S-Right
- key *S-C-N = *S-Down
- key *S-C-P = *S-Up
- key *S-M-B = *S-C-Left
- key *S-M-F = *S-C-Right
- key C-G = Escape
- key C-LeftSquareBracket = Escape
- key C-Slash = C-Z
- key C-Y = C-V
-
-keymap MyEmacsMore : MyEmacs
- key C-V = PageDown
- key A-V = PageUP
- key A-W = C-C
-
-# window InternetExplorer /iexplore\.exe/ : Global
-# window InternetExplorer /iexplore\.exe/ : EmacsMove
-# window InternetExplorer /iexplore\.exe/ : EmacsEdit
-
-window Opera /opera\.exe/ : ReturnGlobal
-
-window Explorer /explorer\.exe/ : MyEmacs
- key C-W = C-W
- key C-D = C-D
-
-window fenrir /fenrir\.exe/ : MyEmacsMore
- key C-LeftSquareBracket = C-LeftSquareBracket
-
-window RDPClient /mstsc\.exe/ : MyEmacs
-window Skype /Skype\.exe/ : MyEmacs
-
-# window Shell /cmd\.exe|powershell.exe/ : MyEmacs
-#  key C-M = C-M
-#  key C-H = C-H
-#  key C-Slash = C-Slash
-#  key C-Y = C-Y
-
-window PowerShell_ISE /powershell_ise\.exe/ : MyEmacsMore
- key C-G = C-G
-
-window Notepad /notepad\.exe/ : MyEmacsMore
-
-window TeraPad /TeraPad\.exe/ : MyEmacsMore
- key C-J = C-J
-
-window Vim /gvim\.exe/ : Global
- key C-Yen = C-Yen
- key C-BackSlash = C-BackSlash
- key C-S-HyphenMinus = C-S-HyphenMinus
-
-window Emacs /runemacs\.exe/ : Global
- key C-Yen = C-Yen
- key C-BackSlash = C-BackSlash
- key C-S-HyphenMinus = C-S-HyphenMinus
-
-window PuTTY /putty\.exe/ : Global
- key C-Yen = C-Yen
- key C-BackSlash = C-BackSlash
- key C-S-HyphenMinus = C-S-HyphenMinus
- key C-S-C = C-Insert
- key C-S-V = S-Insert
-
-# window Firefox /firefox\.exe/ : ReturnGLobal
-# window Word /WINWORD\.EXE/ : Global
-# window PowerPoint /POWERPNT\.EXE/ : Global
-# window Excel /EXCEL\.EXE/ : Global
-# window Evernote /evernote\.exe/ : Global
-# window iTunes /iTunes\.exe/ : Global
-# window Chrome /chrome\.exe/ : Global
-# window Thunderbird /thunderbird\.exe/ : Global
-# window Mendeley /MendedeyDesktop\.exe/ : Global
+#---------------------------------------------------------------------------
+## Include My Application Setttings
+include "window.mayu"

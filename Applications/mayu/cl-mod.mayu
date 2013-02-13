@@ -1,0 +1,6 @@
+# -*- conf-windows -*-
+# vim: filetype=conf
+
+## Caps Lock -> Ctrl
+# mod ctrl += CapsLock
+# key *CapsLock += *LeftControl

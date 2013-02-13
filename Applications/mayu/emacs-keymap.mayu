@@ -1,0 +1,37 @@
+# -*- conf-unix -*-
+# vim: filetype=conf
+
+keymap Global
+ key C-Yen = $ToggleIME
+ key C-BackSlash = $ToggleIME
+ key C-Space = $ToggleIME
+ key C-S-HyphenMinus = $ToggleIME
+
+keymap ReturnGlobal: Global
+ key C-M  = Return
+ key C-J  = Return
+
+keymap MyEmacs : ReturnGlobal
+ key C-D = Delete
+ key C-H = BackSpace
+ key C-W = C-BackSpace
+ key C-K = S-End S-Delete
+ key C-U = S-HOME S-Delete
+ key *S-C-I = *S-Tab
+ key *S-C-A = *S-Home
+ key *S-C-B = *S-Left
+ key *S-C-E = *S-End
+ key *S-C-F = *S-Right
+ key *S-C-N = *S-Down
+ key *S-C-P = *S-Up
+ key *S-M-B = *S-C-Left
+ key *S-M-F = *S-C-Right
+ key C-G = Escape
+ key C-LeftSquareBracket = Escape
+ key C-Slash = C-Z
+ key C-Y = C-V
+
+keymap MyEmacsMore : MyEmacs
+ key C-V = PageDown
+ key A-V = PageUP
+ key A-W = C-C

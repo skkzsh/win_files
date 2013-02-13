@@ -1,0 +1,47 @@
+# -*- conf-unix -*-
+# vim: filetype=conf
+
+mod mod3 = 無変換
+mod mod5 = 変換
+# mod mod3 = !無変換
+# key *無変換 = *Mod3
+
+keymap Global
+
+ # key M3-J = A-Tab
+ # key M3-K = S-A-Tab
+
+ ## VirtuaWin
+ ## TODO: Emacsで使えない
+ key M3-J = A-C-Down
+ key M3-K = A-C-Up
+ key M3-H = A-C-Left
+ key M3-L = A-C-Right
+ key C-M3-J = S-A-C-Down
+ key C-M3-K = S-A-C-Up
+ key C-M3-H = S-A-C-Left
+ key C-M3-L = S-A-C-Right
+ key M5-J = S-A-C-Down
+ key M5-K = S-A-C-Up
+ key M5-H = S-A-C-Left
+ key M5-L = S-A-C-Right
+ key S-M3-J = S-A-Down
+ key S-M3-K = S-A-Up
+ key S-M3-H = S-A-Left
+ key S-M3-L = S-A-Right
+ key M3-_1 = A-C-_1
+ key M3-_2 = A-C-_2
+ key M3-_3 = A-C-_3
+ key M3-_4 = A-C-_4
+ key C-M3-_1 = S-A-C-_1
+ key C-M3-_2 = S-A-C-_2
+ key C-M3-_3 = S-A-C-_3
+ key C-M3-_4 = S-A-C-_4
+ key M5-_1 = S-A-C-_1
+ key M5-_2 = S-A-C-_2
+ key M5-_3 = S-A-C-_3
+ key M5-_4 = S-A-C-_4
+ key S-M3-_1 = S-A-_1
+ key S-M3-_2 = S-A-_2
+ key S-M3-_3 = S-A-_3
+ key S-M3-_4 = S-A-_4
