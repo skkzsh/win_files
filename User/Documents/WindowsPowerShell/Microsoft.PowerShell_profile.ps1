@@ -1,6 +1,10 @@
+#---------------------------------------------------------------------------
+
 ## Path
 # $Env:PATH += ""
 # $Env:PATH = ";" + $Env:Path
+
+#---------------------------------------------------------------------------
 
 ## Aliases
 Set-Alias c Clear-Host
@@ -44,12 +48,20 @@ Set-Alias l less
 #    Set-Alias grep Select-String
 #}
 
+#---------------------------------------------------------------------------
+
 ## Env
 $Env:VISUAL = 'gvim'
 # $Env:EDITOR = 'gvim'
 
+#---------------------------------------------------------------------------
+
 ## Functions
 ## TODO: Verb - Noun
+
+function x {
+    exit
+}
 
 function gtop {
     cd $(git rev-parse --show-toplevel)
@@ -70,6 +82,7 @@ if (Test-Path "$Env:USERPROFILE\Documents\WindowsPowerShell\Functions") {
     . "$Env:USERPROFILE\Documents\WindowsPowerShell\Functions\Code_Repos\elevate-process.ps1"
 }
 
+#---------------------------------------------------------------------------
 
 ## Modules
 if (Test-Path "$Env:USERPROFILE\Documents\WindowsPowerShell\Modules") {
@@ -82,6 +95,7 @@ if (Test-Path "$Env:USERPROFILE\Documents\WindowsPowerShell\Modules") {
     # . "$Env:USERPROFILE\Documents\WindowsPowerShell\Modules\posh-git\profile.example.ps1"
 }
 
+#---------------------------------------------------------------------------
 
 ## Plugins
 if (Test-Path "$Env:USERPROFILE\Documents\WindowsPowerShell\Plugins") {
