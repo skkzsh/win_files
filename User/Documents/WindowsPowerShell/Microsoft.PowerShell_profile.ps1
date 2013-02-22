@@ -1,11 +1,9 @@
 #---------------------------------------------------------------------------
-
 ## Path
 # $Env:PATH += ""
 # $Env:PATH = ";" + $Env:Path
 
 #---------------------------------------------------------------------------
-
 ## Aliases
 Set-Alias c Clear-Host
 Set-Alias o Start-Process
@@ -49,13 +47,11 @@ Set-Alias l less
 #}
 
 #---------------------------------------------------------------------------
-
 ## Env
 $Env:VISUAL = 'gvim'
 # $Env:EDITOR = 'gvim'
 
 #---------------------------------------------------------------------------
-
 ## Functions
 ## TODO: Verb - Noun
 
@@ -83,9 +79,10 @@ if (Test-Path "$Env:USERPROFILE\Documents\WindowsPowerShell\Functions") {
 }
 
 #---------------------------------------------------------------------------
-
 ## Modules
-if (Test-Path "$Env:USERPROFILE\Documents\WindowsPowerShell\Modules") {
+
+## PsGet
+if (Test-Path "$Env:USERPROFILE\Documents\WindowsPowerShell\Modules\PsGet") {
     Import-Module PsGet
 
     # Import-Module Pscx
@@ -96,7 +93,6 @@ if (Test-Path "$Env:USERPROFILE\Documents\WindowsPowerShell\Modules") {
 }
 
 #---------------------------------------------------------------------------
-
 ## Plugins
 if (Test-Path "$Env:USERPROFILE\Documents\WindowsPowerShell\Plugins") {
     ## Load Jump-Location profile
