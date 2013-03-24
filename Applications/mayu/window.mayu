@@ -3,11 +3,17 @@
 
 ## Applications
 
-# window InternetExplorer /iexplore\.exe/ : Global
-# window InternetExplorer /iexplore\.exe/ : EmacsMove
-# window InternetExplorer /iexplore\.exe/ : EmacsEdit
-
 window Opera /opera\.exe/ : ReturnGlobal
+
+window InternetExplorer /iexplore\.exe/ : ReturnGlobal
+ key C-D = Delete
+ key C-H = BackSpace
+ key C-U = S-HOME S-Delete
+ key *S-C-I = *S-Tab
+ key C-G = Escape
+ key C-LeftSquareBracket = Escape
+ key C-Slash = C-Z
+ key C-Y = C-V
 
 window Explorer /explorer\.exe/ : MyEmacs
  key C-W = C-W
