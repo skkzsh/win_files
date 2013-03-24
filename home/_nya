@@ -2,7 +2,6 @@
 # vim: filetype=csh
 
 #---------------------------------------------------------------------------
-
 ## PATH
 
 # set PATH+=%HOMEDRIVE%\MinGW\bin;%HOMEDRIVE%\MinGW\msys\1.0\bin
@@ -12,7 +11,7 @@ set PATH+=%ProgramFiles%\Gow\bin
 ## Elevate Priority
 # set PATH+=%ProgramFiles%\PuTTY
 # set PATH+=%HOMEDRIVE%\Applications\vim73-kaoriya-win64
-# set PATH+=%HOMEDRIVE%\Applications\less-win32\bin
+# set PATH+=%HOMEDRIVE%\opt\less-win32\bin
 # set PATH+=%ProgramFiles%\Git\bin
 
 ## PATH‚ÌON/OFF
@@ -24,7 +23,6 @@ alias msysoff set PATH-=%HOMEDRIVE%\MinGW\bin;%HOMEDRIVE%\MinGW\msys\1.0\bin
 # alias berryoff set PATH-=%HOMEDRIVE%\Python27\Scripts;%HOMEDRIVE%\Python27;%HOMEDRIVE%\strawberry\perl\site\bin;%HOMEDRIVE%\perl\bin;%HOMEDRIVE%\strawberry\c\bin
 
 #---------------------------------------------------------------------------
-
 ## Basic
 
 ## History
@@ -43,7 +41,6 @@ option prompt $e[34;40;1m[$w9] $e[37;1m
 ## suffix
 
 #---------------------------------------------------------------------------
-
 ## Aliases
 alias ll ls -l
 alias la ls -a
@@ -60,6 +57,7 @@ alias nkfg nkf -g
 alias nkfu nkf --overwrite -w -Lu
 alias nkfe nkf --overwrite -e -Lu
 alias nkfs nkf --overwrite -s -Lw
+alias nkfsu nkf --overwrite -s -Lu
 alias rm rm -i
 alias cp cp -i
 alias mv mv -i
@@ -82,7 +80,6 @@ alias l cmd /c "%ProgramFiles%\Git\bin\less.exe"
 # alias l cmd /c "%HOMEDRIVE%\MinGW\msys\1.0\bin\less.exe"
 
 #---------------------------------------------------------------------------
-
 ## Env
 # set LANG=ja_JP.UTF-8
 # TODO: Console2‚ÌPager
@@ -96,12 +93,10 @@ if $TERM == dumb then
 endif
 
 #---------------------------------------------------------------------------
-
 ## Plugins
 source %HOME%\_nya_d\public_repos\git\_nya_git.lua
 
 #---------------------------------------------------------------------------
-
 ## Functions
 gtop{
     cd `git rev-parse --show-toplevel`
