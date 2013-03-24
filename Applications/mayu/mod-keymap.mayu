@@ -1,34 +1,56 @@
 # -*- conf-unix -*-
 # vim: filetype=conf
 
-mod mod3 = ç„¡å¤‰æ›
-mod mod5 = å¤‰æ›
-# mod mod3 = !ç„¡å¤‰æ›
-# key *ç„¡å¤‰æ› = *Mod3
+## FIXME: Emacs‚Åg‚¦‚È‚¢
+
+# mod mod3 = –³•ÏŠ·
+# mod mod5 = •ÏŠ·
+mod mod3 += !–³•ÏŠ·
+mod mod5 += !•ÏŠ·
+# key *–³•ÏŠ· = *mod3
 
 keymap Global
 
- # key M3-J = A-Tab
- # key M3-K = S-A-Tab
+ key M3-J = A-Tab
+ key M3-K = S-A-Tab
+ key M3-Tab = A-Tab
+ key S-M3-Tab = S-A-Tab
+
+ key S-M3-C = &WindowClose
+ key M3-N = &WindowMinimize
+ key M3-X = &WindowMaximize
+ # key C-M3-F = F11
+
+ ## fenrir
+ # key M3-P = A-Colon
+ key M3-Space = A-Colon
+ key M3-Colon = A-Colon
 
  ## VirtuaWin
- ## TODO: Emacsã§ä½¿ãˆãªã„
- key M3-J = A-C-Down
- key M3-K = A-C-Up
- key M3-H = A-C-Left
- key M3-L = A-C-Right
- key C-M3-J = S-A-C-Down
- key C-M3-K = S-A-C-Up
- key C-M3-H = S-A-C-Left
- key C-M3-L = S-A-C-Right
- key M5-J = S-A-C-Down
- key M5-K = S-A-C-Up
- key M5-H = S-A-C-Left
- key M5-L = S-A-C-Right
- key S-M3-J = S-A-Down
- key S-M3-K = S-A-Up
- key S-M3-H = S-A-Left
- key S-M3-L = S-A-Right
+ key M3-H = A-W-Left
+ key M3-L = A-W-Right
+ key C-M3-H = C-W-Left
+ key C-M3-L = C-W-Right
+ key M5-H = C-W-Left
+ key M5-L = C-W-Right
+
+ # key M3-J = A-C-Down
+ # key M3-K = A-C-Up
+ # key M3-H = A-C-Left
+ # key M3-L = A-C-Right
+ # key C-M3-J = S-A-C-Down
+ # key C-M3-K = S-A-C-Up
+ # key C-M3-H = S-A-C-Left
+ # key C-M3-L = S-A-C-Right
+ # key S-M3-J = S-A-Down
+ # key S-M3-K = S-A-Up
+ # key S-M3-H = S-A-Left
+ # key S-M3-L = S-A-Right
+ # key M5-J = S-A-C-Down
+ # key M5-K = S-A-C-Up
+ # key M5-H = S-A-C-Left
+ # key M5-L = S-A-C-Right
+
  key M3-_1 = A-C-_1
  key M3-_2 = A-C-_2
  key M3-_3 = A-C-_3
@@ -37,11 +59,11 @@ keymap Global
  key C-M3-_2 = S-A-C-_2
  key C-M3-_3 = S-A-C-_3
  key C-M3-_4 = S-A-C-_4
+ # key S-M3-_1 = S-A-_1
+ # key S-M3-_2 = S-A-_2
+ # key S-M3-_3 = S-A-_3
+ # key S-M3-_4 = S-A-_4
  key M5-_1 = S-A-C-_1
  key M5-_2 = S-A-C-_2
  key M5-_3 = S-A-C-_3
  key M5-_4 = S-A-C-_4
- key S-M3-_1 = S-A-_1
- key S-M3-_2 = S-A-_2
- key S-M3-_3 = S-A-_3
- key S-M3-_4 = S-A-_4
