@@ -37,18 +37,10 @@ window Console2 /Console.exe/ : Global
 #  key C-Slash = C-Slash
 #  key C-Y = C-Y
 
-window PowerShell_ISE /powershell_ise\.exe/ : MyEmacsMore
- key C-G = C-G
-
-window Notepad /notepad\.exe/ : MyEmacsMore
-
-window TeraPad /TeraPad\.exe/ : MyEmacsMore
- key C-J = C-J
-
-window Vim /gvim\.exe/ : Global
- key C-Yen = C-Yen
- key C-BackSlash = C-BackSlash
- key C-S-HyphenMinus = C-S-HyphenMinus
+# window Vim /gvim\.exe/ : Global
+#  key C-Yen = C-Yen
+#  key C-BackSlash = C-BackSlash
+#  key C-S-HyphenMinus = C-S-HyphenMinus
 
 window Emacs /runemacs\.exe/ : Global
  key C-Yen = C-Yen
@@ -58,11 +50,11 @@ window Emacs /runemacs\.exe/ : Global
 window PuTTY /putty\.exe/ : Global
  key C-Yen = C-Yen
  key C-BackSlash = C-BackSlash
+ key C-Space = C-Space
  key C-S-HyphenMinus = C-S-HyphenMinus
  key C-S-C = C-Insert
  key C-S-V = S-Insert
 
-# window Firefox /firefox\.exe/ : ReturnGLobal
 window Evernote /evernote\.exe/ : MyEmacsMore
  key C-R = S-C-G
  key C-S = C-G
@@ -88,6 +80,7 @@ window TeraPad /TeraPad\.exe/ : MyEmacsPerfect
  # key C-R = S-F3
  # key C-S = C-F
 
+# window Firefox /firefox\.exe/ : ReturnGlobal
 # window PowerPoint /POWERPNT\.EXE/ : Global
 # window Excel /EXCEL\.EXE/ : Global
 # window iTunes /iTunes\.exe/ : Global
