@@ -25,7 +25,11 @@ window fenrir /fenrir\.exe/ : MyEmacsMore
 window RDPClient /mstsc\.exe/ : MyEmacs
 window Skype /Skype\.exe/ : MyEmacs
 
-# window Console2 /Console.exe/ : Global
+window Console2 /Console.exe/ : Global
+ key S-C-RightSquareBracket = C-Tab
+ key S-C-LeftSquareBracket = S-C-Tab
+ key S-M3-RightSquareBracket = C-Tab
+ key S-M3-LeftSquareBracket = S-C-Tab
 
 # window Shell /cmd\.exe|powershell.exe/ : MyEmacs
 #  key C-M = C-M
