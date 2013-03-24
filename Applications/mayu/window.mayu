@@ -53,10 +53,33 @@ window PuTTY /putty\.exe/ : Global
  key C-S-V = S-Insert
 
 # window Firefox /firefox\.exe/ : ReturnGLobal
-# window Word /WINWORD\.EXE/ : Global
+window Evernote /evernote\.exe/ : MyEmacsMore
+ key C-R = S-C-G
+ key C-S = C-G
+
+window Word /WINWORD\.EXE/ : MyEmacsPerfect
+ key C-G = C-G
+ # key C-R =
+ # key C-S = C-F
+
+window PowerShell_ISE /powershell_ise\.exe/ : MyEmacsPerfect
+ key C-G = C-G
+ # key C-R = S-F3
+ # key C-S = C-F
+
+window Notepad /notepad\.exe/ : MyEmacsPerfect
+ key C-G = C-G
+ # key C-R =
+ # key C-S = C-F
+
+window TeraPad /TeraPad\.exe/ : MyEmacsPerfect
+ key C-J = C-J
+ key S-A-_5 = C-R
+ # key C-R = S-F3
+ # key C-S = C-F
+
 # window PowerPoint /POWERPNT\.EXE/ : Global
 # window Excel /EXCEL\.EXE/ : Global
-# window Evernote /evernote\.exe/ : Global
 # window iTunes /iTunes\.exe/ : Global
 # window Chrome /chrome\.exe/ : Global
 # window Thunderbird /thunderbird\.exe/ : Global

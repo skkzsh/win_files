@@ -29,9 +29,25 @@ keymap MyEmacs : ReturnGlobal
  key C-G = Escape
  key C-LeftSquareBracket = Escape
  key C-Slash = C-Z
- key C-Y = C-V
+ key S-A-_5 = C-H
+ key S-A-FullStop = C-END
+ key S-A-Comma = C-HOME
 
 keymap MyEmacsMore : MyEmacs
  key C-V = PageDown
  key A-V = PageUP
  key A-W = C-C
+ key C-Y = C-V
+ key C-FullStop = C-Y
+
+keymap2 MyEmacsC-X
+ key C-S = C-S
+ key C-F = C-O
+ key C-C = &WindowClose
+ # key C-X C-W =
+
+keymap MyEmacsPerfect : MyEmacsMore
+ # key C-R = S-C-G
+ # key C-S = C-G
+ key C-W = C-X
+ key C-X = &Prefix(MyEmacsC-X)
