@@ -26,3 +26,7 @@ include "mod-keymap.mayu"
 #---------------------------------------------------------------------------
 ## Include My Application Setttings
 include "window.mayu"
+
+#---------------------------------------------------------------------------
+## Include Shell Excecutions
+include "shexe.mayu"

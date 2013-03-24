@@ -1,0 +1,19 @@
+# -*- conf-unix -*-
+# vim: filetype=conf
+
+# XXX: How to use environment variables
+
+key S-C-M-B = &ShellExecute("open", "C:/Program Files (x86)/Calibre2/calibre.exe",,, ShowNormal)
+key S-C-M-C = &ShellExecute("open", "C:/Program Files/TrueCrypt/TrueCrypt.exe",,, ShowNormal)
+key S-C-M-E = &ShellExecute("open", "runemacs",,, ShowNormal)
+# key S-C-M-F = &ShellExecute("open", "firefox",,, ShowNormal)
+key S-C-M-N = &ShellExecute("open", "C:/Program Files (x86)/Evernote/Evernote/Evernote.exe",,, ShowNormal)
+key S-C-M-O = &ShellExecute("open", "C:/Program Files (x86)/Opera/opera.exe",,, ShowNormal)
+# key S-C-M-P = &ShellExecute("open", "powershell",,"C:/", ShowNormal)
+key S-C-M-Q = &ShellExecute("open", "C:/Program Files (x86)/Opera Next/opera.exe",,, ShowNormal)
+key S-C-M-R = &ShellExecute("open", "mstsc",,, ShowNormal)
+key S-C-M-S = &ShellExecute("open", "C:/Program Files (x86)/Skype/Phone/Skype.exe",,, ShowNormal)
+key S-C-M-T = &ShellExecute("open", "console",,, ShowNormal)
+# key S-C-M-T = &ShellExecute("open", "cmd",,"C:/", ShowNormal)
+key S-C-M-V = &ShellExecute("open", "gvim",,, ShowNormal)
+key S-C-M-W = &ShellExecute("open", "C:/Program Files (x86)/VMware/VMware Player/vmplayer.exe",,, ShowNormal)
