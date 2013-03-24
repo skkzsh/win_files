@@ -24,8 +24,8 @@ if ($Env:TERM -eq 'dumb') {
     $Env:TERM = 'xterm'
 }
 
-if (Test-Path C:\Applications\less-win32) {
-    $Env:PATH = "C:\Applications\less-win32\bin;" + $Env:Path
+if (Test-Path C:\opt\less-win32) {
+    $Env:PATH = "C:\opt\less-win32\bin;" + $Env:Path
     $Env:PAGER = 'less'
 }
 # elseif (Test-Path $Env:ProgramFiles\Gow\bin) {
