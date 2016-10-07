@@ -14,9 +14,9 @@ $win_dir = "$prefix\Repository\bitbucket\win_files"
 #$dropbox = "$prefix\Dropbox\setting"
 
 ## 共有元の各Directoryで共有させるFilesのList
-$home_files = '_nya'
+## $home_files = '_nya'
 ## 共有元の各Directoryで共有させるDirectoresのList
-$home_dirs = '_nya_d'
+## $home_dirs = '_nya_d'
 
 ### Symbolic Link
 
@@ -25,9 +25,9 @@ $home_dirs = '_nya_d'
 
 ## home
 # foreach ($file in $home_files + $home_dirs) {
-foreach ($file in $home_files, $home_dirs) {
-    smartln.ps1 mklink "$win_dir\home\$file" "$ENV:HOME\$file"
-}
+# foreach ($file in $home_files, $home_dirs) {
+#     smartln.ps1 mklink "$win_dir\home\$file" "$ENV:HOME\$file"
+# }
 
 ## Applications
 smartln.ps1 copy "$win_dir\Applications\mayu\.mayu" "$ENV:HOMEDRIVE\Applications\yamy\.mayu"
